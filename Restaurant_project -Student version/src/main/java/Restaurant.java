@@ -62,4 +62,13 @@ public class Restaurant {
         return name;
     }
 
+    public long calculateTheCostOfSelectedItems(String... selectedItems) {
+        long totalPrice = 0;
+        for (String SelectedItems : selectedItems){
+            totalPrice += findItemByName(SelectedItems).getPrice();
+        }
+        return totalPrice;
+    }
+}
+
 }
